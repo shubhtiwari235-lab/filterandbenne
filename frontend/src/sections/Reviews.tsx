@@ -62,7 +62,7 @@ const VideoCard = ({ review }: { review: typeof reviewsData[0] }) => {
       href={review.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="block break-inside-avoid mb-6 rounded-3xl overflow-hidden shadow-xl transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-black relative group"
+      className="block w-full rounded-3xl overflow-hidden shadow-xl transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-black relative group"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -142,7 +142,7 @@ export default function Reviews() {
           </div>
         </div>
 
-        {/* Mobile / Tablet Layout (standard masonry) */}
+        {/* Mobile / Tablet Layout */}
         <div className="lg:hidden">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-6xl text-[#3e2723] uppercase tracking-tighter mb-4 flex items-center justify-center gap-3">
@@ -157,7 +157,7 @@ export default function Reviews() {
                At Filter & Benne, we serve authentic Davangere flavors, daring you to rediscover the true taste of tradition with every bite.
             </p>
           </div>
-          <div className="columns-1 sm:columns-2 gap-6">
+          <div className="grid grid-cols-2 gap-3 sm:gap-6">
             {reviewsData.map((review) => (
               <VideoCard key={review.id} review={review} />
             ))}
